@@ -2,6 +2,12 @@
 
 <h1>Hospitales Entity Framework</h1>
 
+<a asp-controller="Hospitales"
+   asp-action="Create"
+   class="btn btn-outline-success">
+	Create new Hospital
+</a>
+
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -10,6 +16,7 @@
 			<th>Direccion</th>
 			<th>Telefono</th>
 			<th>Camas</th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -21,6 +28,26 @@
 				<td>@hospital.Direccion</td>
 				<td>@hospital.Telefono</td>
 				<td>@hospital.Camas</td>
+				<td>
+					<a asp-controller="Hospitales"
+					   asp-action="Details"
+					   asp-route-idhospital="@hospital.IdHospital"
+						class="btn btn-info">
+						Details
+					</a>
+					<a asp-controller="Hospitales"
+					   asp-action="Edit"
+					   asp-route-idhospital="@hospital.IdHospital"
+					   class="btn btn-success">
+						Edit
+					</a>
+					<a asp-controller="Hospitales"
+					   asp-action="Delete"
+					   asp-route-idhospital="@hospital.IdHospital"
+					   class="btn btn-danger">
+						Delete
+					</a>
+				</td>
 			</tr>
 		}
 	</tbody>

@@ -1,0 +1,30 @@
+﻿@model Hospital
+
+<h1 style="color:blue">Details</h1>
+
+<p>
+	<a asp-controller="Hospitales"
+	   asp-action="Index"
+	   class="btn btn-outline-dark">
+		Back to list
+	</a>
+</p>
+
+
+<ul class="list-group">
+	<li class="list-group-item">
+		<strong>Id Hospital:</strong> @Model.IdHospital
+	</li>
+	<li class="list-group-item">
+		<strong>Nombre:</strong> @Model.Nombre
+	</li>
+	<li class="list-group-item">
+		<strong>Dirección:</strong> @Model.Direccion
+	</li>
+	<li class="list-group-item">
+		<strong>Teléfono:</strong> @Model.Telefono
+	</li>
+	<li class="list-group-item">
+		<strong>Camas:</strong> @Model.Camas
+	</li>
+</ul>

@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<RepositoryHospital>();
 
-string connectionString = @"Data Source=PCANDREI\SQLEXPRESS;Initial Catalog=HOSPITAL;Persist Security Info=True;User ID=sa;Encrypt=True;Trust Server Certificate=True";
+string connectionString = builder.Configuration.GetConnectionString("SqlHospital");
 
 builder.Services.AddDbContext<HospitalContext>(options => options.UseSqlServer(connectionString));
 

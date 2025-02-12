@@ -1,0 +1,26 @@
+﻿<h1 style="color:red">Create</h1>
+
+<p>
+	<a asp-controller="Hospitales"
+	   asp-action="Index"
+	   class="btn btn-outline-dark">
+		Back to list
+	</a>
+</p>
+
+<form method="post">
+	<label>Id Hospital:</label>
+	<input type="text" name="idhospital" class="form-control" />
+	<label>Nombre:</label>
+	<input type="text" name="nombre" class="form-control" />
+	<label>Dirección:</label>
+	<input type="text" name="direccion" class="form-control" />
+	<label>Teléfono:</label>
+	<input type="text" name="telefono" class="form-control" />
+	<label>Nº Camas:</label>
+	<input type="text" name="camas" class="form-control" />
+	<br />
+	<button class="btn btn-success">
+		Create
+	</button>
+</form>
